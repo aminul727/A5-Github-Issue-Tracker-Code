@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | GitHub Issues Tracker</title>
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <header class="mb-10 bg-base-200">
+        <div class="navbar bg-base-100 shadow-sm flex justify-between px-6">
+            <div class="flex items-center gap-2">
+                 <img class="w-[50px]" src="assets/github-logo.png" alt="">
+                 <p class="text-3xl font-semibold">GitHub Issue Tracker</p>
+            </div>
+            <div class="flex gap-2">
+                <input id="search-input" type="text" placeholder="Search Issues" class="input input-bordered w-24 md:w-auto" />
+                <button onclick="searchIssues()" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container w-10/12 mx-auto">
+
+    
+        <div class="buttons bg-base-200 py-6 px-4 rounded-md shadow-md">
+            <button id="all-btn" class="btn btn-primary" onclick="showAll()">All</button>
+            <button id="open-btn" class="btn" onclick="showOpen()">Open</button>
+            <button id="closed-btn" class="btn" onclick="showClosed()">Closed</button>
+        </div>
+
+        <div class="flex items-center gap-2 bg-base-200 py-6 px-4 rounded-md shadow-md mt-4">
+            <div class="border-10 border-gray-200 rounded-full"><img class="w-[40px]" src="assets/Aperture.png" alt="">
+            </div>
+            <div>
+                <h4 id="issue-count" class="text-xl font-semibold">50 issues</h4>
+                <p class="text-[#64748B]">Track and manage your project issues</p>
+            </div>
+        </div>
+
+        <div id="spinner" class="flex justify-center items-center my-10 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+        </div>
+
+        <div id="issues-container" class="grid grid-cols-4 gap-3 shadow-md mt-1 p-4 bg-base-200"></div>
+
+    </div>
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <div id="detail-container" class="space-y-4">
+        
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+    <script src="home.js"></script>
+
+</body>
+
+</html>

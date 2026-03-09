@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ligth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn | Github Issue Tracker</title>
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="min-h-screen bg-base-50 max-w-md mx-auto py-10 rounded-md shadow-lg">
+    <div class="w-11/12 mx-auto text-center space-y-3">
+        <img class="mx-auto" src="assets/github-logo.png" alt="">
+        <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+        <p class="text-[#64748B]">Sign in to manage your issues</p>
+    </div>
+    <div class="card bg-base-100 w-11/12  mx-auto mt-3">
+        <div class="card-body">
+            <fieldset class="fieldset space-y-1">
+                <label class="label font-semibold text-black text-sm">Username</label>
+                <input id="user-number" type="text" class="input w-full rounded-md" placeholder="Enter user Name" />
+                <p class="text-blue-600">default: admin</p>
+                <label class="label font-semibold text-black text-sm">Password</label>
+                <input id="user-pass" type="password" class="input w-full rounded-md" placeholder="Enter Password" />
+                <p class="text-blue-600">default: admin123</p>
+                <button id="login-btn" class="btn btn-primary mt-4">Login</button>
+            </fieldset>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
